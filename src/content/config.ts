@@ -34,7 +34,7 @@ const experimentsCollection = defineCollection({
 });
 
 export const collections = {
-  blogs: blogCollection,
+  blog: blogCollection,
   shaders: shadersCollection,
   authors: authorsCollection,
   experiments: experimentsCollection,

@@ -8,11 +8,11 @@ export function onChange(code) {
 }
 ---
 
-<Layout>
+<Layout title="Code Mirror">
   <div class="prose dark:prose-invert prose-slate flex flex-row items-center">
     pages/astros/code-mirror-astro
   </div>
-  <Editor client:only="react" onChange={onChange} />
+  <Editor client:only="react" onChange={onChange} code="" />
   <div class="prose dark:prose-invert prose-slate flex flex-row items-center">
   </div>
 </Layout>

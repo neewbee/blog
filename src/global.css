@@ -2,10 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  a {
-    @apply underline break-all bg-amber-800 text-9xl;
-  }
-}
-
 

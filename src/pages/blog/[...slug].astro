@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");
-  return blogEntries.map((entry, ...rest) => {
+  return blogEntries.map((entry) => {
     return {
       params: { slug: entry.slug },
       props: { entry },
@@ -16,7 +16,6 @@ const { Content } = await entry.render();
 import MDXLayout from "../../layouts/MDXLayout.astro";
 ---
 
-<!--<Content />-->
 <MDXLayout title={entry.data.title}>
   <div class="text-2xl m-6 text-clip">{entry.data.title}</div>
   <Content />
